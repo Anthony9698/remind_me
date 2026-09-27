@@ -1,42 +1,37 @@
-import "./ActiveReminderCard.scss";
+import classes from "./ActiveReminderCard.module.scss";
 import { Container, Typography, Avatar, Box, Button } from "@mantine/core";
 import { IoCloseSharp } from "react-icons/io5";
 import { RiAlarmSnoozeLine } from "react-icons/ri";
 
-export default function ActiveReminderCard({
-  title,
-  dueText,
-  imageSymbol,
-  color,
-}) {
+export default function ActiveReminderCard({ title, due, imageSymbol, color }) {
   return (
-    <Container className="reminder-card__container">
-      <Box className="reminder-card__main">
-        <Avatar color={color} className="icon">
+    <Container className={classes.reminder_card__container}>
+      <Box className={classes.reminder_card__main}>
+        <Avatar color={color} className={classes.icon} size={128}>
           {imageSymbol}
         </Avatar>
-        <Box className="reminder-card__content">
-          <Typography className="text">reminder</Typography>
-          <Typography className="title">{title}</Typography>
-          <Typography className="due">{dueText}</Typography>
+        <Box className={classes.reminder_card__content}>
+          <Typography className={classes.text}>reminder</Typography>
+          <Typography className={classes.title}>{title}</Typography>
+          <Typography className={classes.due}>{due}</Typography>
         </Box>
       </Box>
-      <Box className="reminder-card__footer">
+      <Box className={classes.reminder_card__footer}>
         <Button
-          className="action-button"
+          className={classes.action_button}
           color="dark"
-          classNames={{ label: "label" }}
+          classNames={{ label: classes.label }}
         >
           <IoCloseSharp size={36} />
-          <Typography className="text">Dismiss</Typography>
+          <Typography className={classes.text}>Dismiss</Typography>
         </Button>
         <Button
-          className="action-button"
+          className={classes.action_button}
           color="blue"
-          classNames={{ label: "label" }}
+          classNames={{ label: classes.label }}
         >
           <RiAlarmSnoozeLine size={36} />
-          <Typography className="text">Snooze</Typography>
+          <Typography className={classes.text}>Snooze</Typography>
           <Typography>1 hour</Typography>
         </Button>
       </Box>

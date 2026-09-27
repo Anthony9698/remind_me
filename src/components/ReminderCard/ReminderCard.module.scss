@@ -1,0 +1,39 @@
+.reminder_card__container {
+  display: flex;
+  border: 1px solid var(--mantine-color-dark-3);
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 512px;
+  height: 128px;
+
+  .reminder_card__inner {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .icon {
+      svg {
+        color: var(--mantine-color-white);
+      }
+    }
+
+    .reminder_card__content {
+      color: var(--mantine-color-white);
+
+      .title {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+
+      .due {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .action_button {
+    background-color: transparent;
+  }
+}

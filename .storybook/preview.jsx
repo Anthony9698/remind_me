@@ -1,4 +1,5 @@
 import "@mantine/core/styles.css";
+import "@mantine/dates/styles.css";
 import "./preview.scss";
 import { MantineProvider } from "@mantine/core";
 
@@ -58,10 +59,6 @@ const preview = {
   initialGlobals: {
     backgrounds: {
       value: "appDark",
-    },
-    viewport: {
-      value: "reminderDisplay",
-      isRotated: false,
     },
   },
 };
