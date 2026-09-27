@@ -1,0 +1,69 @@
+.reminder-card__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  .reminder-card__main {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .icon {
+      width: 128px;
+      height: 128px;
+
+      svg {
+        color: var(--mantine-color-white);
+      }
+    }
+
+    .reminder-card__content {
+      color: var(--mantine-color-white);
+
+      .text {
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+      }
+
+      .title {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+
+      .due {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  .reminder-card__footer {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+
+    .action-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      flex-direction: column;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 2rem;
+
+      .label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .text {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
