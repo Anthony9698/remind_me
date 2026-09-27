@@ -1,9 +1,14 @@
-import "./ReminderCard.scss";
+import "./ActiveReminderCard.scss";
 import { Container, Typography, Avatar, Box, Button } from "@mantine/core";
 import { IoCloseSharp } from "react-icons/io5";
 import { RiAlarmSnoozeLine } from "react-icons/ri";
 
-export default function ReminderCard({ title, dueText, imageSymbol, color }) {
+export default function ActiveReminderCard({
+  title,
+  dueText,
+  imageSymbol,
+  color,
+}) {
   return (
     <Container className="reminder-card__container">
       <Box className="reminder-card__main">

@@ -1,9 +1,9 @@
-import ReminderCard from "../../components/ReminderCard/ReminderCard";
+import ActiveReminderCard from "../../components/ActiveReminderCard/ActiveReminderCard";
 import { FaRegTrashAlt } from "react-icons/fa";
 
 export default {
-  title: "Components/ReminderCard",
-  component: ReminderCard,
+  title: "Components/ActiveReminderCard",
+  component: ActiveReminderCard,
   parameters: {
     layout: "centered",
   },
