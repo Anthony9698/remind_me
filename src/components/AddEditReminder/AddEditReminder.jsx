@@ -3,8 +3,12 @@ import { TextInput, Button, Typography, Box, Select } from "@mantine/core";
 import { IoIosArrowBack, IoIosArrowForward, IoIosList } from "react-icons/io";
 import { DateTimePicker } from "@mantine/dates";
 import { IoCalendarOutline, IoRepeatOutline } from "react-icons/io5";
+import ReminderIconPicker from "../ReminderIconPicker/ReminderIconPicker";
+import { useState } from "react";
 
 export default function AddEditReminder({ isEditing = false }) {
+  const [icon, setIcon] = useState(null);
+
   return (
     <Box className={classes.add_edit__container}>
       <Box className={classes.top_nav__container}>
@@ -54,8 +58,16 @@ export default function AddEditReminder({ isEditing = false }) {
             "Custom",
           ]}
         />
+        <ReminderIconPicker onChange={setIcon} value={icon} />
       </Box>
-      <Button className={classes.save_button}>Save Reminder</Button>
+      <Box className={classes.action_buttons}>
+        {isEditing && (
+          <Button className={classes.button} color="red">
+            Delete Reminder
+          </Button>
+        )}
+        <Button className={classes.button}>Save Reminder</Button>
+      </Box>
     </Box>
   );
 }

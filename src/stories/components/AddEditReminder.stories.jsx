@@ -12,3 +12,9 @@ export default {
 export const Default = {
   args: {},
 };
+
+export const Editing = {
+  args: {
+    isEditing: true,
+  },
+};
